@@ -1,0 +1,51 @@
+{
+  "name": "etfstudio-dualscreen",
+  "version": "1.0.0",
+  "private": true,
+  "description": "宽基指数行情 V2 双屏版：同一套视图代码，构建期按屏幕形状分包（方屏 390×450 版面 / 圆屏 390×390 内切圆弦宽安全区）。几何由 zosLoader [pf] 注入的形状样式表推导，覆盖 34 种语言与 Noto Sans / Zepp OS Number 设计字体。",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "zeus dev",
+    "build": "zeus build",
+    "preview": "zeus preview",
+    "i18n": "python tools/build_i18n.py && python tools/subset_fonts.py",
+    "docs:structure": "node tools/structure-report.cjs",
+    "render": "node --experimental-vm-modules tools/render-preview.js",
+    "render:round": "node --experimental-vm-modules tools/render-preview.js --round",
+    "render:compare": "node tools/render-compare.cjs",
+    "verify:square": "node tools/verify-frames.cjs s",
+    "verify:round": "node tools/verify-frames.cjs r",
+    "verify:card": "node tools/verify-card.cjs s && node tools/verify-card.cjs r",
+    "verify:fonts": "python tools/verify-font-glyphs.py",
+    "test:data": "node --experimental-vm-modules tests/data-adapter.test.cjs",
+    "test:cache": "node --experimental-vm-modules tests/cache-hydration.test.cjs",
+    "test:navigation": "node tests/navigation-static.test.cjs",
+    "test:navigation-behavior": "node --experimental-vm-modules tests/navigation-behavior.test.cjs",
+    "test:detail": "node tests/detail-visual-static.test.cjs",
+    "test:lifecycle": "node --experimental-vm-modules tests/lifecycle-release.test.cjs",
+    "test:production": "node tests/production-static.test.cjs",
+    "test:platforms": "node tests/platform-shapes.test.cjs",
+    "test:shape": "node --experimental-vm-modules tests/shape-layout.test.cjs",
+    "test:app-widget": "node tests/app-widget.test.cjs",
+    "test:m1m2": "node --experimental-vm-modules tests/m1m2.test.cjs",
+    "test:route": "node --experimental-vm-modules tests/detail-entry-route.test.cjs",
+    "test:metrics": "node --experimental-vm-modules tests/device-metrics.test.cjs",
+    "test:payload": "node tests/payload-trim.test.cjs",
+    "test:lunch": "node --experimental-vm-modules tests/intraday-lunch-bridge.test.cjs",
+    "test:detail-lifecycle": "node --experimental-vm-modules tests/detail-lifecycle.test.cjs",
+    "test:pe-sources": "node tests/pe-source-coverage.test.cjs",
+    "test:transport": "node tests/transport-contract.test.cjs",
+    "check:tests": "npm run test:shape && npm run test:platforms && npm run test:app-widget && npm run test:m1m2 && npm run test:route && npm run test:data && npm run test:cache && npm run test:navigation && npm run test:navigation-behavior && npm run test:detail && npm run test:lifecycle && npm run test:production && npm run test:metrics && npm run test:payload && npm run test:lunch && npm run test:detail-lifecycle && npm run test:pe-sources && npm run test:transport",
+    "check:visual": "npm run render && npm run render:round && npm run verify:square && npm run verify:round && npm run verify:card",
+    "check": "npm run check:tests && npm run check:visual"
+  },
+  "author": "ETFstudio",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@zeppos/device-types": "^3.0.0"
+  },
+  "dependencies": {
+    "@zeppos/zml": "^0.0.9"
+  }
+}

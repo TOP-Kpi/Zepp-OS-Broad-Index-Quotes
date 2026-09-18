@@ -1,0 +1,18 @@
+{
+  // 本配置只服务编辑器 IntelliSense（@zeppos/device-types 提供 @zos/* 的类型），
+  // 不提供任何类型检查，也没有接入 CI。
+  //
+  // 曾经的 "checkJs": true 是误导性的中间态：指定了 "files" 就把包含范围锁死在
+  // 那个 .d.ts 上，checkJs 不会作用于任何 .js——看起来启用了，实际什么都没检查。
+  //
+  // 试过打开（"checkJs": true + "include": ["**/*.js"]）：整个工程报 1598 个错误，
+  // 其中 1190 个是 TS7006（参数隐式 any）——本工程按 ES5 风格写、不写 JSDoc 类型
+  // 注释，这类噪音无法收敛，真正的发现（97 个 TS2339、108 个 TS7053）会被淹没。
+  // 要真做类型检查，得先补 JSDoc 注解，再单开一条 check:types 脚本，而不是靠这里。
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6"
+  },
+  "exclude": ["node_modules", "**/node_modules/*"],
+  "files": ["node_modules/@zeppos/device-types/dist/index.d.ts"]
+}

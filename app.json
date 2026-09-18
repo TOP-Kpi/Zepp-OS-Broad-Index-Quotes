@@ -1,0 +1,411 @@
+{
+  "configVersion": "v3",
+  "app": {
+    "appId": 1126615,
+    "appName": "宽基指数行情",
+    "appType": "app",
+    "version": {
+      "code": 100,
+      "name": "1.0.0"
+    },
+    "icon": "icon.png",
+    "vender": "宽基指数行情",
+    "description": "宽基指数行情 2.0（原 ETFstudio）双屏版：同一套视图代码按屏幕形状构建期分包——app.json 只声明一个构建目标 gt，platforms 写屏幕特征 st（r 圆屏 / s 方屏），形态几何由 zosLoader [pf] 注入的 shape 样式表推导（圆屏按 390×390 内切圆弦宽收窄，方屏沿用 390×450 版面）。附带 M1-M2 剪刀差快捷卡片（app-widget），数据由手机端取数后写入手表本地快照供卡片读取。全量接入 getText 多语言（34 种系统语言）与 Noto Sans / Zepp OS Number 设计字体。"
+  },
+  "permissions": [
+    "data:os.device.info",
+    "device:os.local_storage",
+    "device:os.notification"
+  ],
+  "runtime": {
+    "apiVersion": {
+      "compatible": "3.0.0",
+      "target": "3.5.0",
+      "minVersion": "3.0.0"
+    }
+  },
+  "debug": false,
+  "targets": {
+    "gt": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/home/index.page",
+            "page/universe/index.page",
+            "page/detail/index.page"
+          ]
+        },
+        "app-side": {
+          "path": "app-side/index"
+        },
+        "setting": {
+          "path": "setting/index"
+        },
+        "app-widget": {
+          "widgets": [
+            {
+              "path": "app-widget/index",
+              "icon": "icon.png",
+              "name": "M1-M2 剪刀差",
+              "runtime": {
+                "type": "js"
+              }
+            }
+          ]
+        }
+      },
+      "platforms": [
+        {
+          "st": "r"
+        },
+        {
+          "st": "s"
+        }
+      ],
+      "designWidth": 390
+    }
+  },
+  "i18n": {
+    "zh-CN": {
+      "appName": "宽基指数行情",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2 剪刀差"
+          }
+        ]
+      }
+    },
+    "zh-TW": {
+      "appName": "寬基指數行情",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2 剪刀差"
+          }
+        ]
+      }
+    },
+    "en-US": {
+      "appName": "Broad Index ETF",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2 Gap"
+          }
+        ]
+      }
+    },
+    "es-ES": {
+      "appName": "ETF Índices",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Diferencia M1-M2"
+          }
+        ]
+      }
+    },
+    "ru-RU": {
+      "appName": "Индексы ETF",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Разрыв M1-M2"
+          }
+        ]
+      }
+    },
+    "ko-KR": {
+      "appName": "광역 지수 ETF",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2 격차"
+          }
+        ]
+      }
+    },
+    "fr-FR": {
+      "appName": "ETF Indices",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Écart M1-M2"
+          }
+        ]
+      }
+    },
+    "de-DE": {
+      "appName": "Index-ETFs",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2-Schere"
+          }
+        ]
+      }
+    },
+    "id-ID": {
+      "appName": "ETF Indeks",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Selisih M1-M2"
+          }
+        ]
+      }
+    },
+    "pl-PL": {
+      "appName": "ETF Indeksy",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Różnica M1-M2"
+          }
+        ]
+      }
+    },
+    "it-IT": {
+      "appName": "ETF Indici",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Differenza M1-M2"
+          }
+        ]
+      }
+    },
+    "ja-JP": {
+      "appName": "インデックスETF",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2 ギャップ"
+          }
+        ]
+      }
+    },
+    "th-TH": {
+      "appName": "ETF ดัชนี",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "ส่วนต่าง M1-M2"
+          }
+        ]
+      }
+    },
+    "ar-EG": {
+      "appName": "ETF المؤشرات",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "فرق M1-M2"
+          }
+        ]
+      }
+    },
+    "vi-VN": {
+      "appName": "ETF Chỉ số",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Chênh lệch M1-M2"
+          }
+        ]
+      }
+    },
+    "pt-PT": {
+      "appName": "ETF Índices",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Diferença M1-M2"
+          }
+        ]
+      }
+    },
+    "nl-NL": {
+      "appName": "Index-ETF's",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2-verschil"
+          }
+        ]
+      }
+    },
+    "tr-TR": {
+      "appName": "Geniş Endeks ETF",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2 Farkı"
+          }
+        ]
+      }
+    },
+    "uk-UA": {
+      "appName": "Індекси ETF",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Розрив M1-M2"
+          }
+        ]
+      }
+    },
+    "iw-IL": {
+      "appName": "ETF למדדים",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "פער M1-M2"
+          }
+        ]
+      }
+    },
+    "pt-BR": {
+      "appName": "ETF Índices",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Diferença M1-M2"
+          }
+        ]
+      }
+    },
+    "ro-RO": {
+      "appName": "ETF Indici",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Diferența M1-M2"
+          }
+        ]
+      }
+    },
+    "cs-CZ": {
+      "appName": "ETF Indexy",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Rozdíl M1-M2"
+          }
+        ]
+      }
+    },
+    "el-GR": {
+      "appName": "ETF Δείκτες",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Διαφορά M1-M2"
+          }
+        ]
+      }
+    },
+    "sr-RS": {
+      "appName": "ETF Indeksi",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Razlika M1-M2"
+          }
+        ]
+      }
+    },
+    "ca-ES": {
+      "appName": "ETF Índexs",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Diferència M1-M2"
+          }
+        ]
+      }
+    },
+    "fi-FI": {
+      "appName": "ETF-indeksit",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2-ero"
+          }
+        ]
+      }
+    },
+    "nb-NO": {
+      "appName": "Indeks-ETF",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2-forskjell"
+          }
+        ]
+      }
+    },
+    "da-DK": {
+      "appName": "Indeks-ETF",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2-forskel"
+          }
+        ]
+      }
+    },
+    "sv-SE": {
+      "appName": "Index-ETF",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2-skillnad"
+          }
+        ]
+      }
+    },
+    "hu-HU": {
+      "appName": "Index ETF",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2 különbség"
+          }
+        ]
+      }
+    },
+    "ms-MY": {
+      "appName": "ETF Indeks",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Beza M1-M2"
+          }
+        ]
+      }
+    },
+    "sk-SK": {
+      "appName": "ETF Indexy",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "Rozdiel M1-M2"
+          }
+        ]
+      }
+    },
+    "hi-IN": {
+      "appName": "ब्रॉड इंडेक्स ETF",
+      "app-widget": {
+        "widgets": [
+          {
+            "name": "M1-M2 अंतर"
+          }
+        ]
+      }
+    }
+  },
+  "defaultLanguage": "zh-CN"
+}
