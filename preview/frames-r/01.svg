@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 390" width="390" height="390"><defs><clipPath id="roundClip1"><circle cx="195" cy="195" r="195"/></clipPath></defs><rect width="390" height="390" fill="#000"/><g clip-path="url(#roundClip1)">
+  <rect x="0" y="0" width="390" height="390" fill="#000000"/>
+  <rect x="69" y="81" width="252" height="96" fill="#171717"/>
+  <rect x="45" y="105" width="300" height="48" fill="#171717"/>
+  <circle cx="69" cy="105" r="24" fill="#171717"/>
+  <circle cx="321" cy="105" r="24" fill="#171717"/>
+  <circle cx="69" cy="153" r="24" fill="#171717"/>
+  <circle cx="321" cy="153" r="24" fill="#171717"/>
+  <rect x="69" y="82" width="252" height="1" fill="#2f2f36"/>
+  <rect x="69" y="175" width="252" height="1" fill="#0f0f12"/>
+  <path d="M 153 151 A 42 42 0 0 1 237 151" data-arc-cx="195" data-arc-cy="151" data-arc-r="42" fill="none" stroke="#222222" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 153 151 A 42 42 0 0 1 210.46123121275647 111.94938759269345" data-arc-cx="195" data-arc-cy="151" data-arc-r="42" fill="none" stroke="#ff9f0a" stroke-width="8" stroke-linecap="round"/>
+  <rect x="65" y="185" width="260" height="62" fill="#171717"/>
+  <rect x="45" y="205" width="300" height="22" fill="#171717"/>
+  <circle cx="65" cy="205" r="20" fill="#171717"/>
+  <circle cx="325" cy="205" r="20" fill="#171717"/>
+  <circle cx="65" cy="227" r="20" fill="#171717"/>
+  <circle cx="325" cy="227" r="20" fill="#171717"/>
+  <rect x="65" y="186" width="260" height="1" fill="#2f2f36"/>
+  <rect x="65" y="245" width="260" height="1" fill="#0f0f12"/>
+  <rect x="62" y="209" width="267" height="9" fill="#222222"/>
+  <circle cx="62" cy="214" r="5" fill="#222222"/>
+  <circle cx="329" cy="214" r="5" fill="#222222"/>
+  <circle cx="62" cy="214" r="5" fill="#222222"/>
+  <circle cx="329" cy="214" r="5" fill="#222222"/>
+  <rect x="62" y="209" width="171" height="9" fill="#ff453a"/>
+  <circle cx="62" cy="214" r="5" fill="#ff453a"/>
+  <circle cx="233" cy="214" r="5" fill="#ff453a"/>
+  <circle cx="62" cy="214" r="5" fill="#ff453a"/>
+  <circle cx="233" cy="214" r="5" fill="#ff453a"/>
+  <rect x="245" y="209" width="21" height="9" fill="#636366"/>
+  <circle cx="245" cy="214" r="5" fill="#636366"/>
+  <circle cx="266" cy="214" r="5" fill="#636366"/>
+  <circle cx="245" cy="214" r="5" fill="#636366"/>
+  <circle cx="266" cy="214" r="5" fill="#636366"/>
+  <rect x="278" y="209" width="51" height="9" fill="#30d158"/>
+  <circle cx="278" cy="214" r="5" fill="#30d158"/>
+  <circle cx="329" cy="214" r="5" fill="#30d158"/>
+  <circle cx="278" cy="214" r="5" fill="#30d158"/>
+  <circle cx="329" cy="214" r="5" fill="#30d158"/>
+  <rect x="65" y="255" width="260" height="54" fill="#171717"/>
+  <rect x="45" y="275" width="300" height="14" fill="#171717"/>
+  <circle cx="65" cy="275" r="20" fill="#171717"/>
+  <circle cx="325" cy="275" r="20" fill="#171717"/>
+  <circle cx="65" cy="289" r="20" fill="#171717"/>
+  <circle cx="325" cy="289" r="20" fill="#171717"/>
+  <rect x="65" y="256" width="260" height="1" fill="#2f2f36"/>
+  <rect x="65" y="307" width="260" height="1" fill="#0f0f12"/>
+  <circle cx="291" cy="280" r="10" fill="none" stroke="#2c2c2e" stroke-width="7"/>
+  <path d="M 291 270 A 10 10 0 1 1 281.9517294753398 275.7422070843493" data-arc-cx="291" data-arc-cy="280" data-arc-r="10" fill="none" stroke="#ff453a" stroke-width="7" stroke-linecap="round"/>
+  <text x="96" y="55.7" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-weight="500" font-size="22" fill="#ffffff" text-anchor="start">市场温度</text>
+  <text x="330" y="75.9" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="14" fill="#8e8e93" text-anchor="end">1/6</text>
+  <text x="195" y="146.5" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="30" fill="#ff9f0a" text-anchor="middle">62</text>
+  <text x="195" y="171.3" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">市场震荡偏暖</text>
+  <text x="58" y="204.25" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#8e8e93" text-anchor="start">市场广度</text>
+  <text x="57" y="238.25" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#ff453a" text-anchor="start">上涨 6</text>
+  <text x="195" y="238.25" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#8e8e93" text-anchor="middle">平盘 1</text>
+  <text x="345" y="238.25" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#30d158" text-anchor="end">下跌 2</text>
+  <text x="58" y="273.25" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#8e8e93" text-anchor="start">当前强势</text>
+  <text x="58" y="296.3" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="18" fill="#ffffff" text-anchor="start">中证1000</text>
+  <text x="291" y="284.9" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">82</text>
+  </g><circle cx="195" cy="195" r="194.5" fill="none" stroke="#2c2c2e" stroke-width="1"/></svg>

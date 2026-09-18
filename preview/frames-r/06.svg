@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 390" width="390" height="390"><defs><clipPath id="roundClip6"><circle cx="195" cy="195" r="195"/></clipPath></defs><rect width="390" height="390" fill="#000"/><g clip-path="url(#roundClip6)">
+  <rect x="0" y="0" width="390" height="390" fill="#000000"/>
+  <rect x="58" y="81" width="274" height="30" fill="#171717"/>
+  <rect x="45" y="94" width="300" height="4" fill="#171717"/>
+  <circle cx="58" cy="94" r="13" fill="#171717"/>
+  <circle cx="332" cy="94" r="13" fill="#171717"/>
+  <circle cx="58" cy="98" r="13" fill="#171717"/>
+  <circle cx="332" cy="98" r="13" fill="#171717"/>
+  <rect x="58" y="117" width="274" height="30" fill="#171717"/>
+  <rect x="45" y="130" width="300" height="4" fill="#171717"/>
+  <circle cx="58" cy="130" r="13" fill="#171717"/>
+  <circle cx="332" cy="130" r="13" fill="#171717"/>
+  <circle cx="58" cy="134" r="13" fill="#171717"/>
+  <circle cx="332" cy="134" r="13" fill="#171717"/>
+  <rect x="58" y="153" width="274" height="30" fill="#171717"/>
+  <rect x="45" y="166" width="300" height="4" fill="#171717"/>
+  <circle cx="58" cy="166" r="13" fill="#171717"/>
+  <circle cx="332" cy="166" r="13" fill="#171717"/>
+  <circle cx="58" cy="170" r="13" fill="#171717"/>
+  <circle cx="332" cy="170" r="13" fill="#171717"/>
+  <rect x="58" y="189" width="274" height="30" fill="#171717"/>
+  <rect x="45" y="202" width="300" height="4" fill="#171717"/>
+  <circle cx="58" cy="202" r="13" fill="#171717"/>
+  <circle cx="332" cy="202" r="13" fill="#171717"/>
+  <circle cx="58" cy="206" r="13" fill="#171717"/>
+  <circle cx="332" cy="206" r="13" fill="#171717"/>
+  <rect x="58" y="225" width="274" height="30" fill="#171717"/>
+  <rect x="45" y="238" width="300" height="4" fill="#171717"/>
+  <circle cx="58" cy="238" r="13" fill="#171717"/>
+  <circle cx="332" cy="238" r="13" fill="#171717"/>
+  <circle cx="58" cy="242" r="13" fill="#171717"/>
+  <circle cx="332" cy="242" r="13" fill="#171717"/>
+  <rect x="63" y="267" width="264" height="42" fill="#102a43"/>
+  <rect x="45" y="285" width="300" height="6" fill="#102a43"/>
+  <circle cx="63" cy="285" r="18" fill="#102a43"/>
+  <circle cx="327" cy="285" r="18" fill="#102a43"/>
+  <circle cx="63" cy="291" r="18" fill="#102a43"/>
+  <circle cx="327" cy="291" r="18" fill="#102a43"/>
+  <text x="96" y="55.7" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-weight="500" font-size="22" fill="#ffffff" text-anchor="start">设置</text>
+  <text x="330" y="75.9" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="14" fill="#8e8e93" text-anchor="end">6/6</text>
+  <text x="56" y="100.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#8e8e93" text-anchor="start">默认 ETF</text>
+  <text x="334" y="100.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#0a84ff" text-anchor="end">沪深300  510300</text>
+  <text x="56" y="136.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#8e8e93" text-anchor="start">信号提醒</text>
+  <text x="334" y="136.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#ff453a" text-anchor="end">开启</text>
+  <text x="56" y="172.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#8e8e93" text-anchor="start">行情刷新</text>
+  <text x="334" y="172.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#ffffff" text-anchor="end">60 秒</text>
+  <text x="56" y="208.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#8e8e93" text-anchor="start">数据模式</text>
+  <text x="334" y="208.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#ffffff" text-anchor="end">手机直连</text>
+  <text x="56" y="244.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#8e8e93" text-anchor="start">历史数据库</text>
+  <text x="334" y="244.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#ffffff" text-anchor="end">8/8只 · 最少60日</text>
+  <text x="195" y="294.65" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="19" fill="#0a84ff" text-anchor="middle">刷新全部数据</text>
+  </g><circle cx="195" cy="195" r="194.5" fill="none" stroke="#2c2c2e" stroke-width="1"/></svg>

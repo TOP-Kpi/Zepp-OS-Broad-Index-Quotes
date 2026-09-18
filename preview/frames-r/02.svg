@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 390" width="390" height="390"><defs><clipPath id="roundClip2"><circle cx="195" cy="195" r="195"/></clipPath></defs><rect width="390" height="390" fill="#000"/><g clip-path="url(#roundClip2)">
+  <rect x="0" y="0" width="390" height="390" fill="#000000"/>
+  <rect x="66" y="81" width="102" height="88" fill="#171717"/>
+  <rect x="45" y="102" width="144" height="46" fill="#171717"/>
+  <circle cx="66" cy="102" r="21" fill="#171717"/>
+  <circle cx="168" cy="102" r="21" fill="#171717"/>
+  <circle cx="66" cy="148" r="21" fill="#171717"/>
+  <circle cx="168" cy="148" r="21" fill="#171717"/>
+  <rect x="66" y="82" width="102" height="1" fill="#2f2f36"/>
+  <rect x="66" y="167" width="102" height="1" fill="#0f0f12"/>
+  <rect x="140" y="143" width="29" height="21" fill="#102a43"/>
+  <circle cx="140" cy="154" r="11" fill="#102a43"/>
+  <circle cx="169" cy="154" r="11" fill="#102a43"/>
+  <circle cx="140" cy="154" r="11" fill="#102a43"/>
+  <circle cx="169" cy="154" r="11" fill="#102a43"/>
+  <rect x="222" y="81" width="102" height="88" fill="#171717"/>
+  <rect x="201" y="102" width="144" height="46" fill="#171717"/>
+  <circle cx="222" cy="102" r="21" fill="#171717"/>
+  <circle cx="324" cy="102" r="21" fill="#171717"/>
+  <circle cx="222" cy="148" r="21" fill="#171717"/>
+  <circle cx="324" cy="148" r="21" fill="#171717"/>
+  <rect x="222" y="82" width="102" height="1" fill="#2f2f36"/>
+  <rect x="222" y="167" width="102" height="1" fill="#0f0f12"/>
+  <rect x="296" y="143" width="29" height="21" fill="#3a2a0d"/>
+  <circle cx="296" cy="154" r="11" fill="#3a2a0d"/>
+  <circle cx="325" cy="154" r="11" fill="#3a2a0d"/>
+  <circle cx="296" cy="154" r="11" fill="#3a2a0d"/>
+  <circle cx="325" cy="154" r="11" fill="#3a2a0d"/>
+  <rect x="66" y="177" width="102" height="88" fill="#171717"/>
+  <rect x="45" y="198" width="144" height="46" fill="#171717"/>
+  <circle cx="66" cy="198" r="21" fill="#171717"/>
+  <circle cx="168" cy="198" r="21" fill="#171717"/>
+  <circle cx="66" cy="244" r="21" fill="#171717"/>
+  <circle cx="168" cy="244" r="21" fill="#171717"/>
+  <rect x="66" y="178" width="102" height="1" fill="#2f2f36"/>
+  <rect x="66" y="263" width="102" height="1" fill="#0f0f12"/>
+  <rect x="140" y="239" width="29" height="21" fill="#102a43"/>
+  <circle cx="140" cy="250" r="11" fill="#102a43"/>
+  <circle cx="169" cy="250" r="11" fill="#102a43"/>
+  <circle cx="140" cy="250" r="11" fill="#102a43"/>
+  <circle cx="169" cy="250" r="11" fill="#102a43"/>
+  <rect x="222" y="177" width="102" height="88" fill="#171717"/>
+  <rect x="201" y="198" width="144" height="46" fill="#171717"/>
+  <circle cx="222" cy="198" r="21" fill="#171717"/>
+  <circle cx="324" cy="198" r="21" fill="#171717"/>
+  <circle cx="222" cy="244" r="21" fill="#171717"/>
+  <circle cx="324" cy="244" r="21" fill="#171717"/>
+  <rect x="222" y="178" width="102" height="1" fill="#2f2f36"/>
+  <rect x="222" y="263" width="102" height="1" fill="#0f0f12"/>
+  <rect x="296" y="239" width="29" height="21" fill="#222222"/>
+  <circle cx="296" cy="250" r="11" fill="#222222"/>
+  <circle cx="325" cy="250" r="11" fill="#222222"/>
+  <circle cx="296" cy="250" r="11" fill="#222222"/>
+  <circle cx="325" cy="250" r="11" fill="#222222"/>
+  <text x="96" y="55.7" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-weight="500" font-size="22" fill="#ffffff" text-anchor="start">宽基行情</text>
+  <text x="330" y="75.9" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="14" fill="#8e8e93" text-anchor="end">2/6</text>
+  <text x="55" y="103.3" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="18" fill="#ffffff" text-anchor="start">沪深300</text>
+  <text x="181" y="100.2" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="12" fill="#636366" text-anchor="end">0300</text>
+  <text x="55" y="132.7" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="22" fill="#ff453a" text-anchor="start">4.126</text>
+  <text x="55" y="155.25" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="15" fill="#ff453a" text-anchor="start">+0.85%</text>
+  <text x="154" y="158.75" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#0a84ff" text-anchor="middle">持有</text>
+  <text x="211" y="103.3" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="18" fill="#ffffff" text-anchor="start">中证500</text>
+  <text x="337" y="100.2" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="12" fill="#636366" text-anchor="end">0500</text>
+  <text x="211" y="132.7" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="22" fill="#30d158" text-anchor="start">6.782</text>
+  <text x="211" y="155.25" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="15" fill="#30d158" text-anchor="start">-0.42%</text>
+  <text x="310" y="158.75" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#ff9f0a" text-anchor="middle">观察</text>
+  <text x="55" y="199.3" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="18" fill="#ffffff" text-anchor="start">中证1000</text>
+  <text x="181" y="196.2" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="12" fill="#636366" text-anchor="end">2100</text>
+  <text x="55" y="228.7" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="22" fill="#ff453a" text-anchor="start">2.345</text>
+  <text x="55" y="251.25" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="15" fill="#ff453a" text-anchor="start">+1.36%</text>
+  <text x="154" y="254.75" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#0a84ff" text-anchor="middle">持有</text>
+  <text x="211" y="199.3" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="18" fill="#ffffff" text-anchor="start">科创50</text>
+  <text x="337" y="196.2" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="12" fill="#636366" text-anchor="end">8000</text>
+  <text x="211" y="228.7" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="22" fill="#8e8e93" text-anchor="start">--</text>
+  <text x="211" y="251.25" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="15" fill="#8e8e93" text-anchor="start">--</text>
+  <text x="310" y="254.75" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#8e8e93" text-anchor="middle">--</text>
+  <rect x="57" y="273" width="276" height="36" rx="18" fill="#222222"/>
+  <text x="195" y="296.6" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="16" fill="#0a84ff" text-anchor="middle">6 核心标的  ›</text>
+  </g><circle cx="195" cy="195" r="194.5" fill="none" stroke="#2c2c2e" stroke-width="1"/></svg>

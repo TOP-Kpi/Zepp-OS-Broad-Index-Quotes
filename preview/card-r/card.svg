@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 366 195" width="366" height="195"><defs><clipPath id="cardClip20"><rect width="366" height="195" rx="40"/></clipPath></defs><rect width="366" height="195" rx="40" fill="#000"/><g clip-path="url(#cardClip20)">
+  <rect x="40" y="0" width="286" height="195" fill="#171717"/>
+  <rect x="0" y="40" width="366" height="115" fill="#171717"/>
+  <circle cx="40" cy="40" r="40" fill="#171717"/>
+  <circle cx="326" cy="40" r="40" fill="#171717"/>
+  <circle cx="40" cy="155" r="40" fill="#171717"/>
+  <circle cx="326" cy="155" r="40" fill="#171717"/>
+  <line x1="16" y1="130" x2="350" y2="130" stroke="#2c2c2e" stroke-width="1" stroke-linecap="round"/>
+  <polygon points="16,130.41666666666669 16,153.60416666666666 43.83333333333333,150.29166666666666 71.66666666666666,158.02083333333334 99.5,163.54166666666666 127.33333333333333,159.125 155.16666666666666,151.39583333333334 183,161.33333333333334 210.83333333333331,167.95833333333334 238.66666666666666,170.16666666666666 266.5,164.64583333333334 294.3333333333333,174.58333333333334 322.16666666666663,171.27083333333334 350,167.95833333333334 350,130.41666666666669" fill="#102a43"/>
+  <line x1="16" y1="154" x2="44" y2="150" stroke="#0a84ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="44" y1="150" x2="72" y2="158" stroke="#0a84ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="72" y1="158" x2="100" y2="164" stroke="#0a84ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="100" y1="164" x2="127" y2="159" stroke="#0a84ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="127" y1="159" x2="155" y2="151" stroke="#0a84ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="155" y1="151" x2="183" y2="161" stroke="#0a84ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="183" y1="161" x2="211" y2="168" stroke="#0a84ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="211" y1="168" x2="239" y2="170" stroke="#0a84ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="239" y1="170" x2="267" y2="165" stroke="#0a84ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="267" y1="165" x2="294" y2="175" stroke="#0a84ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="294" y1="175" x2="322" y2="171" stroke="#0a84ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="322" y1="171" x2="350" y2="168" stroke="#0a84ff" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="350" cy="168" r="3" fill="#0a84ff"/>
+  <text x="16" y="33.25" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-weight="500" font-size="15" fill="#8e8e93" text-anchor="start">M1-M2 剪刀差</text>
+  <text x="350" y="33.25" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#636366" text-anchor="end">2026-08</text>
+  <text x="16" y="85.1" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="46" fill="#30d158" text-anchor="start">-3.4</text>
+  <text x="210" y="73.55" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#636366" text-anchor="start">百分点</text>
+  <text x="16" y="113.55" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">M1 同比 4.1%</text>
+  <text x="183" y="113.55" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">M2 同比 7.5%</text>
+  </g><rect x="0.5" y="0.5" width="365" height="194" rx="40" fill="none" stroke="#2c2c2e" stroke-width="1"/></svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 390" width="390" height="390"><defs><clipPath id="roundClip4"><circle cx="195" cy="195" r="195"/></clipPath></defs><rect width="390" height="390" fill="#000"/><g clip-path="url(#roundClip4)">
+  <rect x="0" y="0" width="390" height="390" fill="#000000"/>
+  <rect x="63" y="81" width="108" height="46" fill="#171717"/>
+  <rect x="45" y="99" width="144" height="10" fill="#171717"/>
+  <circle cx="63" cy="99" r="18" fill="#171717"/>
+  <circle cx="171" cy="99" r="18" fill="#171717"/>
+  <circle cx="63" cy="109" r="18" fill="#171717"/>
+  <circle cx="171" cy="109" r="18" fill="#171717"/>
+  <rect x="63" y="82" width="108" height="1" fill="#2f2f36"/>
+  <rect x="63" y="125" width="108" height="1" fill="#0f0f12"/>
+  <rect x="219" y="81" width="108" height="46" fill="#171717"/>
+  <rect x="201" y="99" width="144" height="10" fill="#171717"/>
+  <circle cx="219" cy="99" r="18" fill="#171717"/>
+  <circle cx="327" cy="99" r="18" fill="#171717"/>
+  <circle cx="219" cy="109" r="18" fill="#171717"/>
+  <circle cx="327" cy="109" r="18" fill="#171717"/>
+  <rect x="219" y="82" width="108" height="1" fill="#2f2f36"/>
+  <rect x="219" y="125" width="108" height="1" fill="#0f0f12"/>
+  <rect x="59" y="133" width="272" height="36" fill="#171717"/>
+  <rect x="45" y="147" width="300" height="8" fill="#171717"/>
+  <circle cx="59" cy="147" r="14" fill="#171717"/>
+  <circle cx="331" cy="147" r="14" fill="#171717"/>
+  <circle cx="59" cy="155" r="14" fill="#171717"/>
+  <circle cx="331" cy="155" r="14" fill="#171717"/>
+  <rect x="59" y="134" width="272" height="1" fill="#2f2f36"/>
+  <rect x="59" y="167" width="272" height="1" fill="#0f0f12"/>
+  <rect x="57" y="175" width="276" height="30" fill="#171717"/>
+  <rect x="45" y="187" width="300" height="6" fill="#171717"/>
+  <circle cx="57" cy="187" r="12" fill="#171717"/>
+  <circle cx="333" cy="187" r="12" fill="#171717"/>
+  <circle cx="57" cy="193" r="12" fill="#171717"/>
+  <circle cx="333" cy="193" r="12" fill="#171717"/>
+  <rect x="57" y="176" width="276" height="1" fill="#2f2f36"/>
+  <rect x="57" y="203" width="276" height="1" fill="#0f0f12"/>
+  <rect x="57" y="209" width="276" height="30" fill="#171717"/>
+  <rect x="45" y="221" width="300" height="6" fill="#171717"/>
+  <circle cx="57" cy="221" r="12" fill="#171717"/>
+  <circle cx="333" cy="221" r="12" fill="#171717"/>
+  <circle cx="57" cy="227" r="12" fill="#171717"/>
+  <circle cx="333" cy="227" r="12" fill="#171717"/>
+  <rect x="57" y="210" width="276" height="1" fill="#2f2f36"/>
+  <rect x="57" y="237" width="276" height="1" fill="#0f0f12"/>
+  <rect x="57" y="243" width="276" height="30" fill="#171717"/>
+  <rect x="45" y="255" width="300" height="6" fill="#171717"/>
+  <circle cx="57" cy="255" r="12" fill="#171717"/>
+  <circle cx="333" cy="255" r="12" fill="#171717"/>
+  <circle cx="57" cy="261" r="12" fill="#171717"/>
+  <circle cx="333" cy="261" r="12" fill="#171717"/>
+  <rect x="57" y="244" width="276" height="1" fill="#2f2f36"/>
+  <rect x="57" y="271" width="276" height="1" fill="#0f0f12"/>
+  <rect x="57" y="277" width="276" height="30" fill="#171717"/>
+  <rect x="45" y="289" width="300" height="6" fill="#171717"/>
+  <circle cx="57" cy="289" r="12" fill="#171717"/>
+  <circle cx="333" cy="289" r="12" fill="#171717"/>
+  <circle cx="57" cy="295" r="12" fill="#171717"/>
+  <circle cx="333" cy="295" r="12" fill="#171717"/>
+  <rect x="57" y="278" width="276" height="1" fill="#2f2f36"/>
+  <rect x="57" y="305" width="276" height="1" fill="#0f0f12"/>
+  <text x="96" y="55.7" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-weight="500" font-size="22" fill="#ffffff" text-anchor="start">自选持仓</text>
+  <text x="330" y="75.9" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="14" fill="#8e8e93" text-anchor="end">4/6</text>
+  <text x="58" y="103.25" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#8e8e93" text-anchor="start">总仓位</text>
+  <text x="58" y="121.35" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="21" fill="#0a84ff" text-anchor="start">68%</text>
+  <text x="214" y="103.25" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#8e8e93" text-anchor="start">浮动收益</text>
+  <text x="214" y="121.35" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="21" fill="#ff453a" text-anchor="start">+6.12%</text>
+  <text x="58" y="156.25" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#8e8e93" text-anchor="start">今日收益</text>
+  <text x="335" y="157.3" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="18" fill="#ff453a" text-anchor="end">+0.86%</text>
+  <text x="56" y="187.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#ffffff" text-anchor="start">沪深300  30%</text>
+  <text x="56" y="199.2" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" fill="#8e8e93" text-anchor="start">成本 3.980 · 现价 4.126</text>
+  <text x="333" y="195.25" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="15" fill="#ff453a" text-anchor="end">+3.67%</text>
+  <text x="56" y="221.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#ffffff" text-anchor="start">中证500  22%</text>
+  <text x="56" y="233.2" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" fill="#8e8e93" text-anchor="start">成本 6.510 · 现价 6.782</text>
+  <text x="333" y="229.25" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="15" fill="#ff453a" text-anchor="end">+4.18%</text>
+  <text x="56" y="255.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#ffffff" text-anchor="start">中证1000  16%</text>
+  <text x="56" y="267.2" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" fill="#8e8e93" text-anchor="start">成本 2.102 · 现价 2.345</text>
+  <text x="333" y="263.25" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="15" fill="#ff453a" text-anchor="end">+11.56%</text>
+  </g><circle cx="195" cy="195" r="194.5" fill="none" stroke="#2c2c2e" stroke-width="1"/></svg>

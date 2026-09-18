@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 390" width="390" height="390"><defs><clipPath id="roundClip7"><circle cx="195" cy="195" r="195"/></clipPath></defs><rect width="390" height="390" fill="#000"/><g clip-path="url(#roundClip7)">
+  <rect x="0" y="0" width="390" height="390" fill="#000000"/>
+  <rect x="65" y="125" width="260" height="128" fill="#171717"/>
+  <rect x="45" y="145" width="300" height="88" fill="#171717"/>
+  <circle cx="65" cy="145" r="20" fill="#171717"/>
+  <circle cx="325" cy="145" r="20" fill="#171717"/>
+  <circle cx="65" cy="233" r="20" fill="#171717"/>
+  <circle cx="325" cy="233" r="20" fill="#171717"/>
+  <rect x="65" y="126" width="260" height="1" fill="#2f2f36"/>
+  <rect x="65" y="251" width="260" height="1" fill="#0f0f12"/>
+  <rect x="63" y="261" width="56" height="48" fill="#171717"/>
+  <rect x="45" y="279" width="92" height="12" fill="#171717"/>
+  <circle cx="63" cy="279" r="18" fill="#171717"/>
+  <circle cx="119" cy="279" r="18" fill="#171717"/>
+  <circle cx="63" cy="291" r="18" fill="#171717"/>
+  <circle cx="119" cy="291" r="18" fill="#171717"/>
+  <rect x="63" y="262" width="56" height="1" fill="#2f2f36"/>
+  <rect x="63" y="307" width="56" height="1" fill="#0f0f12"/>
+  <rect x="167" y="261" width="56" height="48" fill="#171717"/>
+  <rect x="149" y="279" width="92" height="12" fill="#171717"/>
+  <circle cx="167" cy="279" r="18" fill="#171717"/>
+  <circle cx="223" cy="279" r="18" fill="#171717"/>
+  <circle cx="167" cy="291" r="18" fill="#171717"/>
+  <circle cx="223" cy="291" r="18" fill="#171717"/>
+  <rect x="167" y="262" width="56" height="1" fill="#2f2f36"/>
+  <rect x="167" y="307" width="56" height="1" fill="#0f0f12"/>
+  <rect x="271" y="261" width="56" height="48" fill="#171717"/>
+  <rect x="253" y="279" width="92" height="12" fill="#171717"/>
+  <circle cx="271" cy="279" r="18" fill="#171717"/>
+  <circle cx="327" cy="279" r="18" fill="#171717"/>
+  <circle cx="271" cy="291" r="18" fill="#171717"/>
+  <circle cx="327" cy="291" r="18" fill="#171717"/>
+  <rect x="271" y="262" width="56" height="1" fill="#2f2f36"/>
+  <rect x="271" y="307" width="56" height="1" fill="#0f0f12"/>
+  <text x="96" y="55.7" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-weight="500" font-size="22" fill="#ffffff" text-anchor="start">沪深300ETF</text>
+  <text x="330" y="75.9" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="14" fill="#8e8e93" text-anchor="end">1/6</text>
+  <text x="60" y="75.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#8e8e93" text-anchor="start">510300 · 更新 14:58</text>
+  <text x="60" y="110.8" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="28" fill="#ff453a" text-anchor="start">4.126</text>
+  <text x="300" y="99.3" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="18" fill="#ff453a" text-anchor="end">+0.85%</text>
+  <text x="300" y="115.9" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="14" fill="#ff453a" text-anchor="end">+0.035</text>
+  <text x="58" y="144.55" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">今开</text>
+  <text x="58" y="164.95" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="17" fill="#ffffff" text-anchor="start">4.090</text>
+  <text x="201" y="144.55" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">昨收</text>
+  <text x="201" y="164.95" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="17" fill="#ffffff" text-anchor="start">4.091</text>
+  <text x="58" y="185.55" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">最高</text>
+  <text x="58" y="205.95" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="17" fill="#ffffff" text-anchor="start">4.140</text>
+  <text x="201" y="185.55" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">最低</text>
+  <text x="201" y="205.95" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="17" fill="#ffffff" text-anchor="start">4.075</text>
+  <text x="58" y="226.55" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">均价</text>
+  <text x="58" y="246.95" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="17" fill="#ffffff" text-anchor="start">4.118</text>
+  <text x="201" y="226.55" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">振幅</text>
+  <text x="201" y="246.95" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="17" fill="#ffffff" text-anchor="start">1.59%</text>
+  <text x="56" y="277.05" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">成交量</text>
+  <text x="56" y="299.65" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="19" fill="#ffffff" text-anchor="start">1.2亿</text>
+  <text x="160" y="277.05" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">成交额</text>
+  <text x="160" y="299.65" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="19" fill="#ffffff" text-anchor="start">4.9亿</text>
+  <text x="264" y="277.05" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">今日主力</text>
+  <text x="264" y="299.65" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="19" fill="#ff453a" text-anchor="start">+0.36亿</text>
+  </g><circle cx="195" cy="195" r="194.5" fill="none" stroke="#2c2c2e" stroke-width="1"/></svg>

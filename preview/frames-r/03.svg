@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 390" width="390" height="390"><defs><clipPath id="roundClip3"><circle cx="195" cy="195" r="195"/></clipPath></defs><rect width="390" height="390" fill="#000"/><g clip-path="url(#roundClip3)">
+  <rect x="0" y="0" width="390" height="390" fill="#000000"/>
+  <rect x="67" y="81" width="256" height="84" fill="#171717"/>
+  <rect x="45" y="103" width="300" height="40" fill="#171717"/>
+  <circle cx="67" cy="103" r="22" fill="#171717"/>
+  <circle cx="323" cy="103" r="22" fill="#171717"/>
+  <circle cx="67" cy="143" r="22" fill="#171717"/>
+  <circle cx="323" cy="143" r="22" fill="#171717"/>
+  <rect x="67" y="82" width="256" height="1" fill="#2f2f36"/>
+  <rect x="67" y="163" width="256" height="1" fill="#0f0f12"/>
+  <circle cx="91" cy="123" r="26" fill="none" stroke="#2c2c2e" stroke-width="7"/>
+  <path d="M 91 97 A 26 26 0 1 1 67.4744966358835 134.0702615806919" data-arc-cx="91" data-arc-cy="123" data-arc-r="26" fill="none" stroke="#ff9f0a" stroke-width="7" stroke-linecap="round"/>
+  <rect x="155" y="95" width="70" height="26" fill="#102a43"/>
+  <circle cx="155" cy="108" r="13" fill="#102a43"/>
+  <circle cx="225" cy="108" r="13" fill="#102a43"/>
+  <circle cx="155" cy="108" r="13" fill="#102a43"/>
+  <circle cx="225" cy="108" r="13" fill="#102a43"/>
+  <rect x="62" y="171" width="110" height="42" fill="#171717"/>
+  <rect x="45" y="188" width="144" height="8" fill="#171717"/>
+  <circle cx="62" cy="188" r="17" fill="#171717"/>
+  <circle cx="172" cy="188" r="17" fill="#171717"/>
+  <circle cx="62" cy="196" r="17" fill="#171717"/>
+  <circle cx="172" cy="196" r="17" fill="#171717"/>
+  <rect x="62" y="172" width="110" height="1" fill="#2f2f36"/>
+  <rect x="62" y="211" width="110" height="1" fill="#0f0f12"/>
+  <rect x="218" y="171" width="110" height="42" fill="#171717"/>
+  <rect x="201" y="188" width="144" height="8" fill="#171717"/>
+  <circle cx="218" cy="188" r="17" fill="#171717"/>
+  <circle cx="328" cy="188" r="17" fill="#171717"/>
+  <circle cx="218" cy="196" r="17" fill="#171717"/>
+  <circle cx="328" cy="196" r="17" fill="#171717"/>
+  <rect x="218" y="172" width="110" height="1" fill="#2f2f36"/>
+  <rect x="218" y="211" width="110" height="1" fill="#0f0f12"/>
+  <rect x="62" y="219" width="110" height="42" fill="#171717"/>
+  <rect x="45" y="236" width="144" height="8" fill="#171717"/>
+  <circle cx="62" cy="236" r="17" fill="#171717"/>
+  <circle cx="172" cy="236" r="17" fill="#171717"/>
+  <circle cx="62" cy="244" r="17" fill="#171717"/>
+  <circle cx="172" cy="244" r="17" fill="#171717"/>
+  <rect x="62" y="220" width="110" height="1" fill="#2f2f36"/>
+  <rect x="62" y="259" width="110" height="1" fill="#0f0f12"/>
+  <rect x="218" y="219" width="110" height="42" fill="#171717"/>
+  <rect x="201" y="236" width="144" height="8" fill="#171717"/>
+  <circle cx="218" cy="236" r="17" fill="#171717"/>
+  <circle cx="328" cy="236" r="17" fill="#171717"/>
+  <circle cx="218" cy="244" r="17" fill="#171717"/>
+  <circle cx="328" cy="244" r="17" fill="#171717"/>
+  <rect x="218" y="220" width="110" height="1" fill="#2f2f36"/>
+  <rect x="218" y="259" width="110" height="1" fill="#0f0f12"/>
+  <rect x="62" y="267" width="266" height="42" fill="#171717"/>
+  <rect x="45" y="284" width="300" height="8" fill="#171717"/>
+  <circle cx="62" cy="284" r="17" fill="#171717"/>
+  <circle cx="328" cy="284" r="17" fill="#171717"/>
+  <circle cx="62" cy="292" r="17" fill="#171717"/>
+  <circle cx="328" cy="292" r="17" fill="#171717"/>
+  <rect x="62" y="268" width="266" height="1" fill="#2f2f36"/>
+  <rect x="62" y="307" width="266" height="1" fill="#0f0f12"/>
+  <text x="96" y="55.7" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-weight="500" font-size="22" fill="#ffffff" text-anchor="start">智能信号</text>
+  <text x="330" y="75.9" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="14" fill="#8e8e93" text-anchor="end">3/6</text>
+  <text x="60" y="75.9" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" fill="#8e8e93" text-anchor="start">沪深300ETF  510300</text>
+  <text x="91" y="130.4" font-family="'Zepp OS Number','DIN Alternate','Bahnschrift',sans-serif" font-size="24" fill="#ff9f0a" text-anchor="middle">68</text>
+  <text x="190" y="113.25" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#0a84ff" text-anchor="middle">继续持有</text>
+  <text x="142" y="135.6" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="16" fill="#ffffff" text-anchor="start">建议仓位 60%</text>
+  <text x="142" y="154.55" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">风险正常</text>
+  <text x="56" y="185.05" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">估值</text>
+  <text x="56" y="204.6" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="16" fill="#ffffff" text-anchor="start">PE分位 32%</text>
+  <text x="212" y="185.05" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">趋势</text>
+  <text x="212" y="204.6" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="16" fill="#ffffff" text-anchor="start">趋势向上</text>
+  <text x="56" y="233.05" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">主力资金</text>
+  <text x="56" y="252.6" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="16" fill="#ffffff" text-anchor="start">主力流入</text>
+  <text x="212" y="233.05" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">基金份额</text>
+  <text x="212" y="252.6" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="16" fill="#ffffff" text-anchor="start">份额增加</text>
+  <text x="58" y="281.55" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8e8e93" text-anchor="start">主要触发原因</text>
+  <text x="58" y="294.05" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#ffffff" text-anchor="start">• 20日均线位于60日均线上方</text>
+  <text x="58" y="307.05" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="13" fill="#ffffff" text-anchor="start">• 今日主力资金净流入</text>
+  </g><circle cx="195" cy="195" r="194.5" fill="none" stroke="#2c2c2e" stroke-width="1"/></svg>
