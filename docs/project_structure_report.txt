@@ -1,0 +1,362 @@
+###############################################################################
+#   宽基指数行情 — 项目源码结构与文件说明（维护报告）
+###############################################################################
+#   应用：宽基指数行情（appId 1126615）   包名：etfstudio-dualscreen
+#   版本：1.0.0（version.code=100）   类型：Zepp OS 手表小程序（App）
+#   配置：configVersion v3，API 兼容 3.0.0 / 目标 3.5.0 / 最低 3.0.0
+#   屏幕：单工程双屏，构建目标 gt，资源配置目录 gt.r / gt.s
+#         构建期按屏幕形状分包，运行期不判断形状（zosLoader [pf]）
+#   页面：page/home/index.page / page/universe/index.page / page/detail/index.page
+#   默认语言：zh-CN，共 34 种语言
+#
+#   技术形态：设备端 page/ + utils/（QuickJS / Canvas / TEXT）
+#             ＋ 手机端 app-side/（Side Service，联网取数并压缩回传）
+#             ＋ setting/ 设置页；经蓝牙 compact 同步给手表显示。
+#
+#   生成：npm run docs:structure（tools/structure-report.cjs）
+#   已忽略：node_modules/、dist/、preview/、.zcode/、__pycache__/、.git/
+#           工程外的 zeppos-docs-main/（官方文档仓库）与 _ETF2.0-归档/ 不属应用
+###############################################################################
+
+├── app-side/
+│   ├── domain/
+│   │       业务域：行情/自选/信号/设置/预取各自的算法与编排（domain 层，不直接发请求）。
+│   │   ├── compact.js  (1.8 KB)
+│   │   │       回传数据压缩（缩字段名、截精度），降低蓝牙传输量。
+│   │   ├── etf-catalog.js  (1.4 KB)
+│   │   ├── finite.js  (750 B)
+│   │   ├── market.js  (1.7 KB)
+│   │   ├── portfolio.js  (1.7 KB)
+│   │   ├── prefetch.js  (4.1 KB)
+│   │   ├── request-router.js  (7.0 KB)
+│   │   │       ★请求路由：method → provider 的映射与统一错误处理。
+│   │   ├── settings.js  (1.9 KB)
+│   │   └── signal.js  (5.1 KB)
+│   ├── history/
+│   │       手机端 132 日历史数据库：落盘、校验、按需回补（离线兜底的数据来源）。
+│   │   ├── config.js  (428 B)
+│   │   ├── fallback.js  (5.1 KB)
+│   │   ├── record-builder.js  (3.4 KB)
+│   │   ├── store.js  (5.2 KB)
+│   │   ├── sync.js  (4.7 KB)
+│   │   └── value.js  (972 B)
+│   ├── providers/
+│   │       数据源适配：东财为主，腾讯/新浪等回退；modules/ 下按「行情/日K/资金流/份额/融资/估值」分文件。
+│   │   ├── modules/
+│   │   │       单个数据能力的取数与解析（含两所的份额源与三个 PE 源）。
+│   │   │   ├── chart.js  (4.8 KB)
+│   │   │   ├── common.js  (3.8 KB)
+│   │   │   ├── flow.js  (4.9 KB)
+│   │   │   ├── margin.js  (1.3 KB)
+│   │   │   ├── money-supply.js  (3.2 KB)
+│   │   │   │       ★货币供应量月报取数：东财 RPT_ECONOMY_CURRENCY_SUPPLY。字段映射（BASIC_CURRENCY=M2、CURRENCY=M1、FREE_CASH=M0、_SAME=同比）由该页面自身脚本确认，认错会得到符号相反的剪刀差。
+│   │   │   ├── overview.js  (7.1 KB)
+│   │   │   ├── quote-parser.js  (2.5 KB)
+│   │   │   ├── quote.js  (4.0 KB)
+│   │   │   ├── share-parser.js  (7.8 KB)
+│   │   │   ├── shares-sse.js  (5.0 KB)
+│   │   │   ├── shares-szse.js  (3.6 KB)
+│   │   │   ├── shares.js  (4.8 KB)
+│   │   │   ├── transport.js  (12.1 KB)
+│   │   │   │       ★HTTP 传输层：cookie jar、ReadableStream 响应体归一化（tests/transport-contract.test.cjs 锁定）。
+│   │   │   ├── universe.js  (2.1 KB)
+│   │   │   ├── valuation-csindex.js  (2.6 KB)
+│   │   │   ├── valuation-legulegu.js  (10.7 KB)
+│   │   │   ├── valuation-xueqiu.js  (2.9 KB)
+│   │   │   └── valuation.js  (7.4 KB)
+│   │   └── eastmoney.js  (2.1 KB)
+│   ├── config.js  (727 B)
+│   │       Side Service 配置（缓存 TTL、熔断、数据源开关等）。
+│   ├── history-db.js  (499 B)
+│   │       手机端历史库的持久化实现。
+│   ├── index.js  (4.0 KB)
+│   │       手机端 Side Service 入口：接收设备端 method 请求并回传压缩后的数据。
+│   └── shares-cache.js  (5.1 KB)
+│           份额数据缓存（两所口径合并前的暂存）。
+├── app-widget/
+│       快捷卡片（负一屏）：M1-M2 剪刀差。绘制区=卡片本身，只读本地快照、只响应点击。官方规范对应见 docs/SHORTCUT_CARD.md。
+│   └── index.js  (12.2 KB)
+├── assets/
+│   ├── gt.r/
+│   │       圆屏资源目录（名字 = target 键 + 形状限定符）：icon.png + 子集化字体，缺文件会导致构建失败。
+│   │   ├── fonts/
+│   │   │   ├── NotoSans-Medium.ttf  (189.5 KB)
+│   │   │   ├── NotoSans-Regular.ttf  (496.6 KB)
+│   │   │   ├── Zepp-OS-Number-blod.ttf  (10.1 KB)
+│   │   │   └── Zepp-OS-Number.ttf  (11.1 KB)
+│   │   └── icon.png  (158.0 KB)
+│   └── gt.s/
+│           方屏资源目录，与 gt.r 同构。
+│       ├── fonts/
+│       │   ├── NotoSans-Medium.ttf  (189.5 KB)
+│       │   ├── NotoSans-Regular.ttf  (496.6 KB)
+│       │   ├── Zepp-OS-Number-blod.ttf  (10.1 KB)
+│       │   └── Zepp-OS-Number.ttf  (11.1 KB)
+│       └── icon.png  (158.0 KB)
+├── docs/
+│       工程文档：当前结构见 PROJECT_DOCS.md 卷首「双屏版」章节。
+│   ├── 宽基指数行情_思维导图.md  (11.2 KB)
+│   │       源码思维导图（按目录的速查）。
+│   ├── 送审材料.md  (9.1 KB)
+│   ├── BUILD_VALIDATION.txt  (4.6 KB)
+│   ├── PROJECT_DOCS.md  (68.4 KB)
+│   │       项目文档合集：当前结构见卷首「双屏版」章节，其余为带日期的历史沿革。
+│   ├── project_structure_report.txt  (21.7 KB)
+│   ├── ROUND_ADAPTATION.md  (14.6 KB)
+│   │       ★双屏适配说明：圆屏为何要重排、内切圆弦宽安全区、各屏数值对照、验证方式与回归证据。
+│   └── SHORTCUT_CARD.md  (7.7 KB)
+│           ★M1-M2 剪刀差快捷卡片：官方规范对应关系、数据链路、两处刻意取舍、验证方式与待真机确认项。
+├── page/
+│   ├── detail/
+│   │   ├── services/
+│   │   │       详情各屏的数据装载（cacheOnly 水合 + 按可见页拉取）。
+│   │   │   ├── chart.js  (3.7 KB)
+│   │   │   ├── flow.js  (1.8 KB)
+│   │   │   ├── margin.js  (1.5 KB)
+│   │   │   ├── overview.js  (2.0 KB)
+│   │   │   ├── shares.js  (3.0 KB)
+│   │   │   └── valuation.js  (3.0 KB)
+│   │   ├── views/
+│   │   │       详情 6 屏各自的绘制（概览 / 行情图 / 资金流 / 份额 / 融资 / PE 估值）。
+│   │   │   ├── chart.js  (13.2 KB)
+│   │   │   ├── common.js  (1.4 KB)
+│   │   │   ├── flow.js  (2.1 KB)
+│   │   │   ├── margin.js  (1.5 KB)
+│   │   │   ├── overview.js  (2.6 KB)
+│   │   │   ├── shares.js  (3.4 KB)
+│   │   │   └── valuation.js  (7.2 KB)
+│   │   ├── index.page.js  (9.5 KB)
+│   │   │       ★详情 Controller：6 屏分页，按可见页装载数据，cacheOnly 预热 + 离开时释放重数据。
+│   │   ├── index.page.r.layout.js  (510 B)
+│   │   │       详情圆屏版面。
+│   │   ├── index.page.s.layout.js  (494 B)
+│   │   │       详情方屏版面。
+│   │   └── model.js  (13.7 KB)
+│   │           详情数值数学：分时压缩时间轴（午间断线桥接）、日K 蜡烛与均线、估值序列。
+│   ├── home/
+│   │   ├── services/
+│   │   │       首页各屏的数据装载与缓存策略。
+│   │   │   ├── alerts.js  (1.8 KB)
+│   │   │   ├── dashboard.js  (2.6 KB)
+│   │   │   ├── history.js  (943 B)
+│   │   │   ├── liquidity.js  (1.4 KB)
+│   │   │   │       取 M1-M2 剪刀差并写卡片读的本地快照。官方规定快捷卡片拿不到蓝牙，所以取数必须在页面侧完成。
+│   │   │   ├── portfolio.js  (3.1 KB)
+│   │   │   └── signal.js  (2.9 KB)
+│   │   ├── views/
+│   │   │       首页 6 屏各自的绘制（市场温度 / 宽基行情 / 智能信号 / 自选持仓 / 预警记录 / 设置）。
+│   │   │   ├── alerts.js  (4.6 KB)
+│   │   │   ├── common.js  (201 B)
+│   │   │   ├── market.js  (4.5 KB)
+│   │   │   ├── portfolio.js  (2.8 KB)
+│   │   │   ├── settings.js  (1.9 KB)
+│   │   │   ├── signal.js  (3.3 KB)
+│   │   │   └── universe.js  (3.2 KB)
+│   │   ├── index.page.js  (5.3 KB)
+│   │   │       ★首页 Controller：6 屏分页 swiper，聚合 views/ 与 services/，负责启动/停止自动刷新与运行期开关。
+│   │   ├── index.page.r.layout.js  (510 B)
+│   │   │       首页圆屏版面（页高、画布宽度等设备像素层面的量）。
+│   │   ├── index.page.s.layout.js  (494 B)
+│   │   │       首页方屏版面，与 .r 同键不同值。
+│   │   └── model.js  (4.9 KB)
+│   │           首页状态：市场温度/信号/持仓/预警各屏的数据装配与派生值。
+│   ├── i18n/
+│   │       34 种语言的 getText 目录，由 tools/build_i18n.py 生成，勿手改。
+│   │   ├── ar-EG.po  (6.2 KB)
+│   │   ├── ca-ES.po  (6.0 KB)
+│   │   ├── cs-CZ.po  (6.0 KB)
+│   │   ├── da-DK.po  (5.9 KB)
+│   │   ├── de-DE.po  (5.9 KB)
+│   │   ├── el-GR.po  (6.2 KB)
+│   │   ├── en-US.po  (5.9 KB)
+│   │   ├── es-ES.po  (6.1 KB)
+│   │   ├── fi-FI.po  (6.0 KB)
+│   │   ├── fr-FR.po  (6.0 KB)
+│   │   ├── hi-IN.po  (6.5 KB)
+│   │   ├── hu-HU.po  (6.0 KB)
+│   │   ├── id-ID.po  (5.9 KB)
+│   │   ├── it-IT.po  (5.9 KB)
+│   │   ├── iw-IL.po  (6.1 KB)
+│   │   ├── ja-JP.po  (6.3 KB)
+│   │   ├── ko-KR.po  (6.0 KB)
+│   │   ├── ms-MY.po  (5.9 KB)
+│   │   ├── nb-NO.po  (5.9 KB)
+│   │   ├── nl-NL.po  (5.9 KB)
+│   │   ├── pl-PL.po  (5.9 KB)
+│   │   ├── pt-BR.po  (5.9 KB)
+│   │   ├── pt-PT.po  (5.9 KB)
+│   │   ├── ro-RO.po  (6.0 KB)
+│   │   ├── ru-RU.po  (6.2 KB)
+│   │   ├── sk-SK.po  (6.0 KB)
+│   │   ├── sr-RS.po  (6.0 KB)
+│   │   ├── sv-SE.po  (6.0 KB)
+│   │   ├── th-TH.po  (6.4 KB)
+│   │   ├── tr-TR.po  (6.0 KB)
+│   │   ├── uk-UA.po  (6.3 KB)
+│   │   ├── vi-VN.po  (6.0 KB)
+│   │   ├── zh-CN.po  (6.2 KB)
+│   │   └── zh-TW.po  (6.2 KB)
+│   └── universe/
+│       ├── services/
+│       │       核心标的列表页的数据装载：一次 dashboard 请求喂满 6 屏并按屏做渲染门控。
+│       │   └── universe.js  (1.3 KB)
+│       ├── views/
+│       │       核心标的单标的整页绘制（大卡 + 底部入口按钮绑定）。
+│       │   └── detail.js  (3.4 KB)
+│       ├── index.page.js  (4.1 KB)
+│       │       ★核心标的列表页 Controller：6 屏分页 swiper。数据装配在 services/，绘制与交互在 views/，本文件只管生命周期与资源交还时机。
+│       ├── index.page.r.layout.js  (510 B)
+│       │       核心标的圆屏版面。
+│       ├── index.page.s.layout.js  (494 B)
+│       │       核心标的方屏版面。
+│       └── model.js  (1.2 KB)
+│               核心标的列表页状态：按 code 合并 dashboard 的 universe 与 market.items。
+├── setting/
+│   └── index.js  (4.4 KB)
+│           手机端设置页（AppSettingsPage）：自选持仓、默认标的、预警阈值。
+├── tests/
+│       回归测试（node --experimental-vm-modules 用 vm.SourceTextModule 加载真实模块）。由 npm run check:tests 串联。
+│   ├── app-widget.test.cjs  (9.2 KB)
+│   │       ★快捷卡片的官方约束回归：注册字段、可用控件、16px 边距、只读快照、点击目标可解析。
+│   ├── cache-hydration.test.cjs  (4.5 KB)
+│   ├── data-adapter.test.cjs  (7.1 KB)
+│   ├── detail-entry-route.test.cjs  (8.1 KB)
+│   │       核心标的 → 详情 的入口约定（replace 顶替 + 先释放本页资源），改回 push 会重新黑屏。
+│   ├── detail-lifecycle.test.cjs  (11.8 KB)
+│   ├── detail-visual-static.test.cjs  (4.5 KB)
+│   ├── device-metrics.test.cjs  (5.4 KB)
+│   ├── intraday-lunch-bridge.test.cjs  (6.7 KB)
+│   ├── lifecycle-release.test.cjs  (11.1 KB)
+│   ├── m1m2.test.cjs  (13.8 KB)
+│   │       ★剪刀差契约与数据源字段映射（用真实响应样本钉死 M1/M2 不被认错）。
+│   ├── navigation-behavior.test.cjs  (4.8 KB)
+│   ├── navigation-static.test.cjs  (7.0 KB)
+│   ├── payload-trim.test.cjs  (8.2 KB)
+│   ├── pe-source-coverage.test.cjs  (6.3 KB)
+│   ├── platform-shapes.test.cjs  (11.6 KB)
+│   │       ★app.json 形状声明，以及每个形状的版面文件与 resources 资源完整性。
+│   ├── production-static.test.cjs  (3.9 KB)
+│   │       发布门禁静态扫描（版本一致、debug=false、语法、资源非空等）。
+│   ├── shape-layout.test.cjs  (9.2 KB)
+│   │       ★★两份形状样式表：键集合一致 + 视图用键可解析 + 圆内/内容带校验。
+│   └── transport-contract.test.cjs  (4.3 KB)
+├── tools/
+│       构建期与验证工具，不进安装包（.cjs/.py，避免被 zeus 当源码扫描）。
+│   ├── diagnostics/
+│   │       人工诊断脚本（需联网或需手动触发）：核对数据源契约、量载荷体积。不参与 npm run check，也不是构建链的一部分。
+│   │   ├── consistency-audit.py  (3.9 KB)
+│   │   │       跨文件常量比对：标的数量兜底、版本号、语言清单、chart 截断上限、安全边距、TTL/点数上限。
+│   │   ├── i18n-inert-keys.py  (2.2 KB)
+│   │   │       列各语言覆盖表里 EN 已删除的惰性条目（永不 emit，但会误导阅读）。
+│   │   ├── i18n-script-audit.py  (2.3 KB)
+│   │   │       扫全部 msgstr 的字母表混排（.replace() 拼翻译留下的坏数据）——同一条规则已锁进 tests/payload-trim.test.cjs。
+│   │   ├── smoke-dashboard.cjs  (4.6 KB)
+│   │   │       market 瘦身体积对比 + dashboard 契约冒烟（改载荷结构时量一次）。
+│   │   ├── verify-flow-sources.cjs  (3.1 KB)
+│   │   │       联网诊断主力资金源的 ut 参数/主机契约。
+│   │   └── verify-pe-sources.cjs  (6.6 KB)
+│   │           联网核对 6 只 ETF 的乐咕 PE 源（离线回归见 tests/pe-source-coverage.test.cjs）。
+│   ├── fonts-src/
+│   │   ├── Noto-Sans-Medium.ttf  (13.50 MB)
+│   │   ├── Noto-Sans-Regular.ttf  (13.55 MB)
+│   │   ├── Zepp-OS-Number-blod.ttf  (10.1 KB)
+│   │   ├── Zepp-OS-Number-Condensed-blod.ttf  (22.9 KB)
+│   │   ├── Zepp-OS-Number-Condensed.ttf  (27.4 KB)
+│   │   └── Zepp-OS-Number.ttf  (11.1 KB)
+│   ├── build_i18n.py  (59.7 KB)
+│   │       由代码词条生成 page/i18n/*.po 与内置译文兜底。
+│   ├── dead-exports.py  (1.6 KB)
+│   ├── frame-freshness.cjs  (3.1 KB)
+│   │       ★帧新鲜度签名：render 时写入、verify 前比对。没有它时 verify-frames/verify-card 会拿旧帧判全绿（已实测）。
+│   ├── i18n-report.py  (2.6 KB)
+│   ├── render-compare.cjs  (4.0 KB)
+│   │       方屏/圆屏并排对照画册。
+│   ├── render-preview.js  (33.8 KB)
+│   │       ★离屏渲染器：vm 桩掉 @zos，把真实视图代码转成 SVG 画册（--round 出圆屏版）。
+│   ├── structure-report.cjs  (18.7 KB)
+│   │       生成本报告。
+│   ├── subset_fonts.py  (3.8 KB)
+│   │       字体子集化：输出目录由 app.json 的形状声明推导，每个形状各产出到 assets/<target>.<st>/fonts/。
+│   ├── unused-imports.py  (1.7 KB)
+│   ├── verify-card.cjs  (8.7 KB)
+│   │       ★卡片版面校验：圆角背景、内容不出卡、16px 内容边距、走势图存在、文字不重叠。
+│   ├── verify-font-glyphs.py  (1.7 KB)
+│   │       校验子集字体覆盖全部译文用字（缺字只有真机上才看得出来）。需 fontTools。
+│   └── verify-frames.cjs  (12.3 KB)
+│           ★逐帧校验：r = 圆内 + 内容带 + 不叠字（硬闸门）；s = 越界清单对基线。
+├── utils/
+│   ├── navigation/
+│   │       导航与场景：路由（safePush/safeReplace）、分页 swiper、常驻窗口、滚动条。
+│   │   ├── index.js  (618 B)
+│   │   │       导航门面（utils/navigation 的入口）：转发分页容器 / 窗口与定时器 / 滚动条 / 场景生命周期 primitive。
+│   │   ├── route.js  (2.0 KB)
+│   │   │       ★导航入口：safePush / safeReplace（带防连点），replace 用于核心标的→详情以控制页面栈深度。
+│   │   ├── scenes.js  (16.2 KB)
+│   │   │       场景常驻窗口管理：创建/复用/释放场景与容器。
+│   │   ├── scrollbar.js  (735 B)
+│   │   │       列表滚动条绘制与命中。
+│   │   ├── swiper.js  (4.2 KB)
+│   │   │       分页 swiper 封装（页高走设备像素）。
+│   │   └── window.js  (4.1 KB)
+│   │           常驻窗口索引计算（中心 ± 邻居）。
+│   ├── ui/
+│   │       绘图与交互 primitive：场景、组件、图表、触摸滚动、动画。
+│   │   ├── charts.js  (19.9 KB)
+│   │   │       图表 primitive：折线/面积/柱/双轴/图例/轴标签。
+│   │   ├── components.js  (14.5 KB)
+│   │   │       组件级绘制：drawHeader（按 SAFE_AREA 与形状度量自适应）、卡片、指标卡（含 tight 档）、按钮。
+│   │   ├── index.js  (943 B)
+│   │   │       绘图门面（utils/ui 的入口）：转发 utils/ui/* 的绘制 primitive。
+│   │   ├── interaction.js  (6.0 KB)
+│   │   │       触摸与手势：点击区、纵向滚动（设备像素 ↔ 设计单位用 DESIGN_SCALE 换算）。
+│   │   ├── motion.js  (3.5 KB)
+│   │   │       动画与缓动。
+│   │   ├── scene.js  (7.6 KB)
+│   │   │       场景创建与绘制收尾（clearScene / finishScene）。
+│   │   └── vscroll.js  (2.6 KB)
+│   │           纵向滚动容器（列表）。
+│   ├── compat.js  (1.7 KB)
+│   │       ES5 兼容小工具（findFirst、isFiniteNumber）。
+│   ├── constants.js  (12.4 KB)
+│   │       ★设备与版面令牌：设备信息防御性读取、由形状样式表推导 SAFE_AREA / CONTENT / columns()、色板、ETF 清单、缓存 TTL、设计字体清单。
+│   ├── data.js  (6.1 KB)
+│   │       requestWithCache：设备端请求缓存（TTL、去重、cacheOnly 水合、失败保留上帧）。
+│   ├── finite.js  (547 B)
+│   │       数值归一：'-' / '--' / 空串一律收敛成 null（不收敛的话 Number('')=0 会冒充真实读数）。side 侧对应 app-side/domain/finite.js。
+│   ├── format.js  (2.4 KB)
+│   │       数值/日期格式化与颜色映射（数值归一走 utils/finite.js）。
+│   ├── i18n.js  (1.4 KB)
+│   │       getText 封装（t / tf），34 语言运行时取译。
+│   ├── m1m2.js  (6.9 KB)
+│   │       ★M1-M2 剪刀差契约 + 本地快照：剪刀差算法、快照校验（缺失一律收敛成 null，不冒充 0）、走势序列与纵轴范围。页面侧写、快捷卡片读，两端共用同一份契约。
+│   ├── refresh.js  (6.2 KB)
+│   │       定时刷新与延迟调度（deferInitialLoad / deferCacheHydration / startAutoRefresh）。
+│   ├── runtime.js  (4.3 KB)
+│   │       运行期开关与代次：避免页面销毁后迟到的响应继续渲染。
+│   ├── shape.r.layout.js  (8.7 KB)
+│   │       ★★圆屏形状样式表：页头度量 + 13 屏纵向节奏。键集合必须与 shape.s 完全一致（tests/shape-layout.test.cjs 锁定）。
+│   ├── shape.s.layout.js  (7.9 KB)
+│   │       ★★方屏形状样式表：同构的另一份。构建期由 zosLoader [pf] 选中。
+│   ├── signals.js  (4.4 KB)
+│   │       信号归一化与通知评估（含 consumeDashboardSignals：消费一份 dashboard 的通知，首页与核心标的页共用）。
+│   ├── storage.js  (10.1 KB)
+│   │       本地存储读写（自选持仓、预警阈值、快照）。
+│   ├── universe.js  (2.0 KB)
+│   │       远端 universe × market.items 的合并规则：首页与核心标的页共用（差异只有落到 row 上的展示字段，用 decorate 回调注入）。
+│   └── view-state.js  (1.4 KB)
+│           shouldRenderData 等渲染门控。
+├── .gitignore  (169 B)
+│       忽略 node_modules / dist / 日志 / IDE 文件。
+├── app.js  (477 B)
+│       应用级主入口（空壳）：只创建 BaseApp 并注册 onCreate/onDestroy。
+├── app.json  (7.9 KB)
+│       ★应用/页面配置（构建必读）。targets.gt 声明一个构建目标，platforms 写屏幕特征 st（r/s），designWidth=390；页面清单、app-side、setting 入口也在这里。
+├── global.d.ts  (75 B)
+│       TypeScript 引用：指向 @zeppos/device-types 的类型声明。
+├── jsconfig.json  (1005 B)
+│       编辑器 IntelliSense 配置（不提供类型检查，原因见文件内注释），供 @zeppos/device-types 的类型提示。
+└── package.json  (3.2 KB)
+        Node/构建脚本清单（维护入口）。check = check:tests + check:visual。
+
+未在说明表中登记的文件（新增文件请补 NOTES 或确认无需说明）：
+  （无）

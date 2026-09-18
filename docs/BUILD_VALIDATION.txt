@@ -1,0 +1,70 @@
+宽基指数行情 V2 双屏版（方屏 + 圆屏）production validation
+Date: 2026-09-17
+版本：1.0.0（versionCode 100），appId 1126615，configVersion v3
+
+## 构建声明（官方 v3 屏幕适配规范）
+
+  app.json targets.gt.platforms = [{"st":"r"},{"st":"s"}]，designWidth 390
+  资源目录 assets/gt.r/ 与 assets/gt.s/（各自 icon.png + fonts/）
+  版面文件 page/<page>/index.page.[pf].layout.js，构建期 [pf] → r / s
+  快捷卡片 app-widget/index.js（.js：卡片 runtime 声明为 js），登记在 targets.gt.module["app-widget"].widgets
+  卡片名在根 i18n 的 app-widget.widgets[0].name（34 种语言齐备）
+
+## 门禁
+
+  PASS  npm run check                         （18 项测试 + 渲染校验，exit 0）
+  PASS  test:shape_layout                     两份形状样式表键集合一致、视图用键可解析
+  PASS  test:platform_shapes                  形状声明齐全，每个形状的版面与 assets 资源完整
+                                               gt -> r: 360/416/454/466/480, s: 320×380/390×450/432×514
+  PASS  test:app_widget                       卡片官方约束：注册字段、可用控件、16px 边距、
+                                               只读快照、点击目标可解析
+                                               （4 条卡片文案 × 34 份 .po 全含；34 语言均有卡片名）
+  PASS  test:m1m2                             剪刀差契约 + 数据源字段映射（真实响应样本）
+  PASS  test:detail_entry_route               核心标的 → 详情（replace 顶替 + 先释放本页资源）
+  PASS  test:data_adapter
+  PASS  test:cache_hydration
+  PASS  test:navigation_static
+  PASS  test:navigation_behavior
+  PASS  test:detail_visual_static
+  PASS  test:lifecycle_release
+  PASS  test:production_static                app/package 版本一致（1.0.0 / code 100）、debug=false
+  PASS  test:device_metrics                   异常 getDeviceInfo 不抛错；390×450 取值不变（30/26、358）
+  PASS  test:payload_trim
+  PASS  test:intraday_lunch_bridge
+  PASS  test:detail_lifecycle
+  PASS  test:pe_sources                       6 只 ETF、7 条指数映射
+  PASS  test:transport_contract
+  PASS  verify:square                         方屏越界清单 7 条，与基线逐条一致（均为原有行为）
+  PASS  verify:round                          圆屏 19 帧 0 失败 0 警告（圆内 + 内容带 + 不叠字）
+  PASS  verify:card                           卡片 366×225（方）/ 366×195（圆），0 失败 0 警告
+                                               （判据做过反向测试：注入越界文字/缺折线/缺圆角
+                                                 三种缺陷均被抓出并 exit 1）
+  PASS  render / render:round / render:compare 三份画册（各 20 帧，含 1 帧快捷卡片）
+  PASS  verify:fonts                          子集字体覆盖全部译文用字（942 字，两形状均无缺字）
+
+## 构建产物
+
+  zeus build  exit 0
+  dist/1126615-宽基指数行情V2-1.0.0-<时间戳>.zab
+    含 12 个 .zpk：圆屏 7 个（360×360 / 416×416 / 454×454 / 466×466 / 480×480，
+                          跨 NXP / APOLLO / ZPS）
+                  方屏 5 个（390×450 ×3 / 320×380 / 432×514）
+    圆屏包与方屏包内同名页面产物逐字节不同（已比对 md5），证明 [pf] 按形状分别解析
+    每个包内含 app-widget/index.bin（11 KB；没有把形状样式表打进卡片包）
+    两个形状的 assets 内均含 icon.png 与 4 个设计字体
+    包内 app.json 携带 34 种语言的卡片名（已解包核对）
+
+## 未做视觉人眼验收
+
+  本次改造未做人眼目视验收（当前会话模型不支持图片输入）。视觉结论均来自程序化检查：
+  几何包围盒是否越界（按绘制顺序扣掉遮罩）、文字是否落在内容带 / 内容边距内、文字是否重叠、
+  卡片圆角背景是否是"两矩形+四圆"、走势图与零轴是否真的画出来了，以及与基线的签名/字节比对。
+  渲染产物见 preview/{index,index-round,compare}.html（含卡片帧 preview/card-{s,r}/card.svg）。
+
+## 真机验收仍需覆盖
+
+  双屏：圆屏最小档 360×360（Active Edge）与 416（Falcon）上的可读性；圆形裁剪下的触摸热区手感；
+        表冠翻页（SCREEN_MODE_SWIPER + crown_enable）；圆屏内存表现；
+        核心标的 → 详情 的 replace 入口。
+  卡片：负一屏里的实际卡片高度与圆角（getAppWidgetSize() 真机返回值）；点击整卡跳回应用的响应；
+        360×360 上卡片内容是否够看；非 zh/ja/es 语言下英文短标签的实际观感。
